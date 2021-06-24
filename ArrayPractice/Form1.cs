@@ -88,6 +88,23 @@ namespace ArrayPractice
                 vb = -Math.Abs(vb);
             }
 
+            if (label3.Left < 0)
+            {
+                vc = Math.Abs(vc);
+            }
+            if (label3.Top < 0)
+            {
+                vd = Math.Abs(vd);
+            }
+            if (label3.Right > ClientSize.Width)
+            {
+                vc = -Math.Abs(vc);
+            }
+            if (label3.Bottom > ClientSize.Height)
+            {
+                vd = -Math.Abs(vd);
+            }
+
             Point fpos = PointToClient(MousePosition);
 
             if ((fpos.X >= label1.Left)
