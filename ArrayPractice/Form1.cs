@@ -34,6 +34,9 @@ namespace ArrayPractice
 
             label2.Left = rand.Next(ClientSize.Width - label2.Width);
             label2.Top = rand.Next(ClientSize.Height - label2.Height);
+
+            label3.Left = rand.Next(ClientSize.Width - label3.Width);
+            label3.Top = rand.Next(ClientSize.Height - label3.Height);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -65,6 +68,24 @@ namespace ArrayPractice
             if (label1.Bottom > ClientSize.Height)
             {
                 vy = -Math.Abs(vy);
+            }
+
+
+            if (label2.Left < 0)
+            {
+                va = Math.Abs(va);
+            }
+            if (label2.Top < 0)
+            {
+                vb = Math.Abs(vb);
+            }
+            if (label2.Right > ClientSize.Width)
+            {
+                va = -Math.Abs(va);
+            }
+            if (label2.Bottom > ClientSize.Height)
+            {
+                vb = -Math.Abs(vb);
             }
 
             Point fpos = PointToClient(MousePosition);
