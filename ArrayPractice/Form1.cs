@@ -24,6 +24,9 @@ namespace ArrayPractice
 
             label1.Left = rand.Next(ClientSize.Width - label1.Width);
             label1.Top = rand.Next(ClientSize.Height - label1.Height);
+
+            label2.Left = rand.Next(ClientSize.Width - label2.Width);
+            label2.Top = rand.Next(ClientSize.Height - label2.Height);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -33,6 +36,12 @@ namespace ArrayPractice
 
             label1.Left += vx;
             label1.Top += vy;
+
+            label2.Left += vx;
+            label2.Top += vy;
+
+            label3.Left += vx;
+            label3.Top += vy;
 
             if (label1.Left < 0)
             {
@@ -60,6 +69,11 @@ namespace ArrayPractice
             {
                 timer1.Enabled = false;
             }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
